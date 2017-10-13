@@ -144,7 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Astronauta.h" />
-    <ClInclude Include="ListaPlaneta.h" />
+    <ClInclude Include="ListaAstronautas.h" />
     <ClInclude Include="Utils.h" />
     <ClInclude Include="Nave.h" />
     <ClInclude Include="Planeta.h" />
@@ -154,7 +154,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Astronauta.cpp" />
-    <ClCompile Include="ListaPlaneta.cpp" />
+    <ClCompile Include="ListaAstronautas.cpp" />
     <ClCompile Include="Nave.cpp" />
     <ClCompile Include="Planeta.cpp" />
     <ClCompile Include="stdafx.cpp">

@@ -1,6 +1,8 @@
 #include "stdafx.h"
 #include<iostream>
 #include<string>
+#include<fstream>
+#include<cstdlib>
 
 using namespace std;
 
@@ -40,4 +42,18 @@ int subMenu4()
 			cout << "Opcion no valida, Ingrese nuevamente\n" << endl;
 		}
 	} while (opcion < 1 || opcion >2); return opcion;
+}
+
+void leerArchAstronautas() {
+
+	string linea;
+	ifstream archivo("Astronautas.txt");
+	if (archivo.is_open) {
+		while (getline(archivo, linea)) {
+
+			cout << linea << endl;
+
+		}
+	}
+	archivo.close();
 }

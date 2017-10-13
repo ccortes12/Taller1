@@ -9,9 +9,7 @@ using namespace std;
 
 int main()
 {
-
-
-
+	leerArchAstronautas();
 	int opcion = menuPrincipal();
 	int opcion1, opcion4;
 
@@ -36,7 +34,7 @@ int main()
 			break;
 		}
 
-		break;//break case 1
+		break;///break case 1
 
 	case 2: //Listado de naves
 
@@ -59,7 +57,7 @@ int main()
 			break;
 		}
 
-		break;//break case 4
+		break;///break case 4
 
 	case 5: //Estado mision
 
@@ -78,13 +76,6 @@ int main()
 		break;
 	}
 
-	
-
-
-
-
-
-	
 
 	system("pause");
     return 0;
