@@ -10,7 +10,21 @@ using namespace std;
 int main()
 {
 	int opcion;
-	opcion = menuPrincipal();
+
+	do {
+		//Ciclo para repetir el ingreso de opcion del usuario
+		opcion = menuPrincipal();
+		if (opcion < 0 || opcion > 8) {
+			cout << "Opcion no valida ingrese nuevamente\n" << endl;
+		}
+	} while (opcion < 0 || opcion > 8);
+
+
+	
+
+
+
+
 
 	
 

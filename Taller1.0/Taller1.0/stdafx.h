@@ -13,7 +13,7 @@
 #include"Nave.h"
 #include"Astronauta.h"
 #include"Planeta.h"
-#include"Tabla.h"
+
 #include"Utils.h"
 
 

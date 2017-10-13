@@ -9,7 +9,7 @@ class Astronauta
 public:
 	Astronauta();//Constructor por defecto
 	//Constructor con parametros
-	Astronauta(string nombre, int edad, int anosExp, string naveAsig = "No Asignado"); //Valor por defecto
+	Astronauta(string nombre, int edad, int anosExp, string naveAsig ); //Valor por defecto
 	Astronauta(const Astronauta &astr); //Constructor copia
 	~Astronauta(); //Destructor
 
