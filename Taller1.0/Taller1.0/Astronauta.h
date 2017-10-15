@@ -21,6 +21,10 @@ public:
 
 	void setNave(string nave);//Set para asignar la nave
 
+	//Sobrecarga 
+	bool operator ==(const Astronauta & astr); //Sobrecarga de ==
+	bool operator >(const Astronauta & astr); //Sobrecarga de >
+
 private:
 	//Atributos de la clase
 	string nombre;

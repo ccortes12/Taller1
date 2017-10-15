@@ -62,7 +62,6 @@ void leerArchAstronautas() {
 		//Archivo abierto
 		cout << "\nCargando datos desde archivo 'Astronautas.txt' ...." << endl;
 		ListaAstronautas listaAstronautas;
-		
 		while (getline(archivoEntrada, linea)) { //Hasta que no llegue al fin del archivo
 			int i = 0;
 			stringstream ss(linea);
@@ -71,7 +70,8 @@ void leerArchAstronautas() {
 
 			if (!indicador) { //Entra una vez para crear listaAstronautas
 				int largo = atoi(palabra.c_str());
-				listaAstronautas = ListaAstronautas(largo);
+				ListaAstronautas listAstronauta(largo);
+				
 				indicador = true;
 
 			}
@@ -91,9 +91,8 @@ void leerArchAstronautas() {
 						nave = "";
 					}
 
-					Astronauta ast = Astronauta(nombre, edad, anosExp, nave);
+					Astronauta *ast = new Astronauta(nombre, edad, anosExp, nave);
 
-					 
 
 					i++;
 				}
