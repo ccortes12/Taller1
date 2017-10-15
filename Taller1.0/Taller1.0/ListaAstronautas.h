@@ -11,10 +11,10 @@ public:
 	bool isEmpty();
 	bool isLlena();
 	bool eliminar(Astronauta astr);
+	void desplegarLista();
 	int buscarElemento(Astronauta astr);
 	bool existeElemento(Astronauta astr);
 	int getCantElems();
-	void desplegarLista();
 
 	~ListaAstronautas();
 
