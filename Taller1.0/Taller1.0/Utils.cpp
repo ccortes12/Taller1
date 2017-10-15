@@ -80,11 +80,16 @@ void leerArchAstronautas() {
 					getline(ss, palabra, ','); string nombre = palabra;
 					getline(ss, palabra, ','); int edad = atoi(palabra.c_str());
 					getline(ss, palabra, ','); int anosExp = atoi(palabra.c_str());
-					getline(ss, palabra, ','); 
-					
-					string habilitado = palabra;
+					string nave;
+					try {
+						getline(ss, palabra, ',');
+						nave = palabra;
+					}
+					catch (...) {//catch all
+						nave = "";
+					}
 
-					Astronauta *ast = new Astronauta(nombre, edad, anosExp, habilitado);
+					Astronauta *ast = new Astronauta(nombre, edad, anosExp, nave);
 					
 					listaAstronautas.arr[i] = *ast;
 					i++;

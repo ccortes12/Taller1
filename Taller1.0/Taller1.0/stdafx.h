@@ -14,6 +14,8 @@
 #include"Astronauta.h"
 #include"Planeta.h"
 #include"ListaAstronautas.h"
+#include"ListaPlanetas.h"
+#include"ListaNaves.h"
 
 #include"Utils.h"
 

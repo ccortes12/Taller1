@@ -11,6 +11,7 @@ public:
 	~ListaAstronautas();
 
 	Astronauta *arr;
+
 private:
 
 	int largo;
