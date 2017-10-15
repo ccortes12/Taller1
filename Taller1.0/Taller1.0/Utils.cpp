@@ -101,3 +101,22 @@ void leerArchAstronautas() {
 	}
 	
 }
+
+void leerArchNaves()
+{
+	string linea;
+	ifstream archivoEntrada;
+
+	archivoEntrada.open("Naves.csv");
+
+	while (getline(archivoEntrada, linea)) {
+		stringstream ss(linea);
+
+		string aux;
+		getline(ss, aux, ','); string nombre = aux;
+		getline(ss, aux, ','); string destino = aux;
+		getline(ss, aux, ','); int maxTripulantes = atoi(aux.c_str());
+
+
+	}
+}
