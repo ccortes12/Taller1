@@ -93,7 +93,6 @@ void leerArchAstronautas() {
 
 					Astronauta *ast = new Astronauta(nombre, edad, anosExp, nave);
 
-
 					i++;
 				}
 			}
