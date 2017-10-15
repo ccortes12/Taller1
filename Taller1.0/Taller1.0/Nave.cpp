@@ -44,3 +44,8 @@ string* Nave::getLista()
 {
 	return listaSuministros;
 }
+
+bool Nave::operator==(const Nave & nav)
+{
+	return (this->nombre == nav.nombre && this->destino == nav.destino && this->maxTripulantes == nav.maxTripulantes && this->listaSuministros == nav.listaSuministros);
+}

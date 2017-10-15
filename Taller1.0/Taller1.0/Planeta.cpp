@@ -44,3 +44,8 @@ string* Planeta::getLista()
 {
 	return listaRequerimientos;
 }
+
+bool Planeta::operator==(const Planeta & plant)
+{
+	return(this->nombre == plant.nombre && this->habilitado == plant.habilitado && this->listaRequerimientos == plant.listaRequerimientos && this->distanciaTierra == plant.distanciaTierra);
+}

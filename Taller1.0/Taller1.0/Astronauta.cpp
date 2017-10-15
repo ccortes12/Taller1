@@ -47,3 +47,16 @@ void Astronauta::setNave(string nave)
 {
 	this->naveAsig = nave;
 }
+
+bool Astronauta::operator==(const Astronauta & astr)
+{
+	return (this->nombre == astr.nombre && this->edad == astr.edad && this->anosExp == astr.anosExp && this->naveAsig == astr.naveAsig);
+}
+
+bool Astronauta::operator>(const Astronauta & astr)
+{
+	if (astr.anosExp < this->anosExp) {
+		return true;
+	}
+	return false;
+}

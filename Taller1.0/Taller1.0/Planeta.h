@@ -18,6 +18,8 @@ public:
 	string getHabilitado();
 	string* getLista();
 
+	//Sobrecarga
+	bool operator ==(const Planeta & plant); //Sobrecarga de ==
 
 private:
 	//Atributos de la clase

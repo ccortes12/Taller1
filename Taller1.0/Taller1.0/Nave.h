@@ -16,6 +16,8 @@ public:
 	int getTripulantes();
 	string* getLista();
 
+	//Sobrecargas
+	bool operator ==(const Nave & nav); //Objeto igual
 
 private:
 	//Atributos del objeto Nave
