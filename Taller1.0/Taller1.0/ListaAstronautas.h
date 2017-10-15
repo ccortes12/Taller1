@@ -10,9 +10,9 @@ public:
 
 	~ListaAstronautas();
 
+	Astronauta *arr;
 private:
 
-	Astronauta *arr;
 	int largo;
 };
 

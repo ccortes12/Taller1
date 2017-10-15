@@ -50,20 +50,48 @@ int subMenu4()
 void leerArchAstronautas() {
 
 	string linea;
+	bool indicador = false; //Indica si ya fue creada la lista
 	ifstream archivoEntrada;
 	archivoEntrada.open("Astronautas.txt");
 
 	if (archivoEntrada.fail()) {
 		cout << "El archivo no se abrio correctamente" << endl;
+		exit(1);
 	}
+	else {
+		//Archivo abierto
+		cout << "\nCargando datos desde archivo 'Astronautas.txt' ...." << endl;
 
-	while (getline(archivoEntrada, linea)) {
-		stringstream ss(linea);
-		string aux;
-		getline(ss, aux, ","); cout << aux << endl;
-		getline(ss, aux, ","); cout << aux << endl;
-		getline(ss, aux, ","); cout << aux << endl;
-		
+		while (getline(archivoEntrada,linea)){ //Hasta que no llegue al fin del archivo
+			int i = 0;
+			stringstream ss(linea);
+			string palabra;
+			ListaAstronautas listaAstronautas;
+			
+			if (!indicador) { //Entra una vez para crear listaAstronautas
+				int largo = atoi(palabra.c_str());
+				ListaAstronautas listaAstronautas(largo);
+				indicador = true;
+
+			}else{
+
+				while (!ss.eof()) {
+
+					getline(ss, palabra, ','); string nombre = palabra;
+					getline(ss, palabra, ','); int edad = atoi(palabra.c_str());
+					getline(ss, palabra, ','); int anosExp = atoi(palabra.c_str());
+					getline(ss, palabra, ','); 
+					
+					string habilitado = palabra;
+
+					Astronauta *ast = new Astronauta(nombre, edad, anosExp, habilitado);
+					
+					listaAstronautas.arr[i] = *ast;
+					i++;
+				}
+			}
+		}
+	archivoEntrada.close();
 	}
 	
 }

@@ -59,4 +59,11 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Astronautas.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Naves.csv" />
+    <None Include="Planetas.csv" />
+  </ItemGroup>
 </Project>
