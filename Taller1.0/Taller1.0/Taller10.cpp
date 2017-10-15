@@ -18,7 +18,7 @@ int main()
 
 	int opcion1, opcion4;
 	int opcion = menuPrincipal();
-	
+
 	do {
 		//Switch del programa principal
 		switch (opcion)
@@ -87,9 +87,9 @@ int main()
 	} while (opcion != 8);
 
 	system("pause");
-    */
+	*/
 
-	Astronauta astr = Astronauta("CHORIZO",56,30,"PLEXMOVIL");
+	Astronauta astr = Astronauta("CHORIZO", 56, 30, "PLEXMOVIL");
 	Astronauta astr1 = Astronauta("PLEXMAN", 80, 120, "PLEXSHIP");
 	ListaAstronautas list = ListaAstronautas(8);
 
@@ -97,6 +97,22 @@ int main()
 	list.agregar(astr1);
 	list.desplegarLista();
 	cout << list.getCantElems() << endl;
+
+	list.eliminar(astr);
+
+	list.desplegarLista();
+
+	bool existe = list.buscarElemento(astr1);
+
+	if (existe) {
+
+		cout << "Existe elemento" << endl;
+
+	}else {
+
+		cout << "No existe elemento" << endl;
+
+	}
 
 	
 	return 0;

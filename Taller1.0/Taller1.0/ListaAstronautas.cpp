@@ -82,59 +82,7 @@ bool ListaAstronautas::isLlena()
 
 bool ListaAstronautas::eliminar(Astronauta astr)
 {
-	if (isEmpty()) {
-
-		return false;
-	}
-	else {
-
-		return true;
-
-	}
-	
 	return false;
-}
-
-int ListaAstronautas::buscarElemento(Astronauta astr)
-{
-	if (isEmpty()) {
-
-		return -1;
-	}
-
-	for (int i = 0; i < this->cantElems; i++ ) {
-
-		if (this->arr[i] == astr  ) {
-
-			return i;
-
-		}
-	return 0;
-}
-
-
-
-bool ListaAstronautas::existeElemento(Astronauta astr){
-		
-		if (isEmpty()) {
-
-			return false;
-		}
-		
-		for (int i = 0; i < this->cantElems; i++) {
-
-			if (this->arr[i] == astr) {
-
-				return true;
-
-		}
-		return false;
-	
-}
-
-int ListaAstronautas::getCantElems()
-{
-	return this->cantElems;
 }
 
 
@@ -149,8 +97,49 @@ void ListaAstronautas::desplegarLista()
 
 }
 
-
-ListaAstronautas::~ListaAstronautas()
+int ListaAstronautas::buscarElemento(Astronauta astr)
 {
+	if (isEmpty()) {
+
+		return -1;
+	}
+		
+	for (int i = 0; i < (this->cantElems); i++) {
+
+		if (arr[i] == astr) {
+
+			return i;
+		}
+	}
+	
+	return -1;
+}
+
+
+bool ListaAstronautas::existeElemento(Astronauta astr)
+{
+	if (isEmpty()) {
+
+		return false;
+	}
+
+	for (int i = 0; i < (this->cantElems); i++) {
+
+		if (arr[i] == astr) {
+
+			return true;
+		}
+	}
+	
+	
+	return false;
+}
+
+int ListaAstronautas::getCantElems()
+{
+	return this->cantElems;
+}
+
+ListaAstronautas::~ListaAstronautas() {
 	delete[]arr;
 }
