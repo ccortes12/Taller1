@@ -1,9 +1,9 @@
 8
-Neil Armstrong,41,22
+Neil Armstrong,41,22,MILLENIUMHAWK
 Buzz Aldrin,45,19,Apollo
-Michael Collins,38,17
+Michael Collins,38,17,MAIKELSHIP
 Ford,28,10,Gold
-Pete,34,8
+Pete,34,8,DAMN
 Arthur,26,3,Gold
-Mark,42,15
-Komarov,40,12
+Mark,42,15,DMAN2
+Komarov,40,12,PLEX

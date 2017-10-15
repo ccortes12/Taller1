@@ -47,8 +47,9 @@ int subMenu4()
 	} while (opcion < 1 || opcion >2); return opcion;
 }
 
-void leerArchAstronautas() {
+ListaAstronautas leerArchAstronautas() {
 
+	ListaAstronautas listaAstronautas;
 	string linea;
 	bool indicador = false; //Indica si ya fue creada la lista
 	ifstream archivoEntrada;
@@ -61,7 +62,7 @@ void leerArchAstronautas() {
 	else {
 		//Archivo abierto
 		cout << "\nCargando datos desde archivo 'Astronautas.txt' ...." << endl;
-		ListaAstronautas listaAstronautas;
+		
 		while (getline(archivoEntrada, linea)) { //Hasta que no llegue al fin del archivo
 			int i = 0;
 			stringstream ss(linea);
@@ -70,7 +71,7 @@ void leerArchAstronautas() {
 
 			if (!indicador) { //Entra una vez para crear listaAstronautas
 				int largo = atoi(palabra.c_str());
-				ListaAstronautas listAstronauta(largo);
+				listaAstronautas = ListaAstronautas(largo);
 				
 				indicador = true;
 
@@ -92,7 +93,7 @@ void leerArchAstronautas() {
 					}
 
 					Astronauta *ast = new Astronauta(nombre, edad, anosExp, nave);
-
+					listaAstronautas.agregar(*ast);
 
 					i++;
 				}
@@ -100,6 +101,7 @@ void leerArchAstronautas() {
 		}
 	}
 	
+	return listaAstronautas;
 }
 
 void leerArchNaves()
