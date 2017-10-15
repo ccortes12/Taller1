@@ -1,8 +1,11 @@
 #include "stdafx.h"
 #include<iostream>
 #include<string>
+
+
 #include<fstream>
-#include<cstdlib>
+#include<ostream>
+#include<sstream>
 
 using namespace std;
 
@@ -47,13 +50,20 @@ int subMenu4()
 void leerArchAstronautas() {
 
 	string linea;
-	ifstream archivo("Astronautas.txt");
-	if (archivo.is_open) {
-		while (getline(archivo, linea)) {
+	ifstream archivoEntrada;
+	archivoEntrada.open("Astronautas.txt");
 
-			cout << linea << endl;
-
-		}
+	if (archivoEntrada.fail()) {
+		cout << "El archivo no se abrio correctamente" << endl;
 	}
-	archivo.close();
+
+	while (getline(archivoEntrada, linea)) {
+		stringstream ss(linea);
+		string aux;
+		getline(ss, aux, ","); cout << aux << endl;
+		getline(ss, aux, ","); cout << aux << endl;
+		getline(ss, aux, ","); cout << aux << endl;
+		
+	}
+	
 }
