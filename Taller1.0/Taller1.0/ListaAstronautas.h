@@ -7,6 +7,13 @@ public:
 	ListaAstronautas & operator =(const ListaAstronautas& lst); //Constructor asignacion
 	ListaAstronautas(ListaAstronautas&& lst);//Constructor movimiento
 	ListaAstronautas& operator =(ListaAstronautas&& lst); //Asignacion del movimiento
+	void agregar(Astronauta astr);
+	bool isEmpty();
+	bool isLlena();
+	bool eliminar(Astronauta astr);
+	int buscarElemento(Astronauta astr);
+	int getCantElems();
+	void desplegarLista();
 
 	~ListaAstronautas();
 
@@ -14,6 +21,7 @@ public:
 
 private:
 
+	int cantElems;
 	int largo;
 };
 

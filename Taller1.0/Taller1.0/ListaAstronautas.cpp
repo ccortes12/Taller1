@@ -45,6 +45,89 @@ ListaAstronautas & ListaAstronautas::operator=(ListaAstronautas && lst)
 	return *this;
 }
 
+void ListaAstronautas::agregar(Astronauta astr)
+{
+	
+	
+	if (isLlena()) {
+
+		cout << "Lista llena, no puede exceder en los espacios del vector" << endl;
+	
+	}
+	
+	this->arr[this->cantElems] = astr;
+	++(this->cantElems);
+
+}
+
+bool ListaAstronautas::isEmpty()
+{
+	if (this->cantElems == 0) {
+
+		return true;
+	}
+	return false;
+
+}
+
+bool ListaAstronautas::isLlena()
+{
+	if (this->cantElems == (this->largo - 1)) {
+		return true;
+
+	}
+	
+	return false;
+}
+
+bool ListaAstronautas::eliminar(Astronauta astr)
+{
+	if (isEmpty()) {
+
+		return false;
+	}
+	else {
+
+		return true;
+
+	}
+	
+	return false;
+}
+
+int ListaAstronautas::buscarElemento(Astronauta astr)
+{
+	if (isEmpty()) {
+
+		return -1;
+	}
+
+	for (int i = 0; i < this->cantElems; i++ ) {
+
+		//if (this->arr[i] = astr  ) {
+
+
+		}
+	return 0;
+
+	}
+int ListaAstronautas::getCantElems()
+{
+	return this->cantElems;
+}
+
+
+void ListaAstronautas::desplegarLista()
+{
+	for (int i = 0; i < this->cantElems; i++) {
+
+		cout << "[Dato " << (i + 1) << ":" << arr[i].getNombre()<< "]" << endl;
+
+	}
+
+
+}
+
 
 ListaAstronautas::~ListaAstronautas()
 {

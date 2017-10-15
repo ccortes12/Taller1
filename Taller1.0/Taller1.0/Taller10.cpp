@@ -3,13 +3,16 @@
 #include<iostream>
 #include<string>
 #include "stdafx.h"
+#include "ListaAstronautas.h"
+#include "Astronauta.h"
+
 
 
 using namespace std;
 
 int main()
 {
-	
+	/*
 	leerArchAstronautas();//Lectura archivo astronauta
 
 
@@ -84,5 +87,19 @@ int main()
 	} while (opcion != 8);
 
 	system("pause");
-    return 0;
-}
+    */
+
+	Astronauta astr = Astronauta("CHORIZO",56,30,"PLEXMOVIL");
+	Astronauta astr1 = Astronauta("PLEXMAN", 80, 120, "PLEXSHIP");
+	ListaAstronautas list = ListaAstronautas(8);
+
+	list.agregar(astr);
+	list.agregar(astr1);
+	list.desplegarLista();
+	cout << list.getCantElems() << endl;
+
+	
+	return 0;
+
+	
+	}
