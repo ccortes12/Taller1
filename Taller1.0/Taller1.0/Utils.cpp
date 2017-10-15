@@ -69,7 +69,7 @@ ListaAstronautas leerArchAstronautas() {
 			string palabra;
 			
 
-			if (!indicador) { //Entra una vez para crear listaAstronautas
+			if (indicador == false) { //Entra una vez para crear listaAstronautas
 				int largo = atoi(palabra.c_str());
 				listaAstronautas = ListaAstronautas(largo);
 				
@@ -89,18 +89,18 @@ ListaAstronautas leerArchAstronautas() {
 						nave = palabra;
 					}
 					catch (...) {//catch all
-						nave = "";
+						nave = " ";
 					}
 
-					Astronauta *ast = new Astronauta(nombre, edad, anosExp, nave);
-					listaAstronautas.agregar(*ast);
+					Astronauta ast = Astronauta(nombre, edad, anosExp, nave);
+					listaAstronautas.agregar(ast);
 
 					i++;
 				}
 			}
 		}
 	}
-	
+	archivoEntrada.close();
 	return listaAstronautas;
 }
 
