@@ -12,6 +12,7 @@ public:
 	bool isLlena();
 	bool eliminar(Astronauta astr);
 	int buscarElemento(Astronauta astr);
+	bool existeElemento(Astronauta astr);
 	int getCantElems();
 	void desplegarLista();
 

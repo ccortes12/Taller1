@@ -104,13 +104,34 @@ int ListaAstronautas::buscarElemento(Astronauta astr)
 
 	for (int i = 0; i < this->cantElems; i++ ) {
 
-		//if (this->arr[i] = astr  ) {
+		if (this->arr[i] == astr  ) {
 
+			return i;
 
 		}
 	return 0;
+}
 
-	}
+
+
+bool ListaAstronautas::existeElemento(Astronauta astr){
+		
+		if (isEmpty()) {
+
+			return false;
+		}
+		
+		for (int i = 0; i < this->cantElems; i++) {
+
+			if (this->arr[i] == astr) {
+
+				return true;
+
+		}
+		return false;
+	
+}
+
 int ListaAstronautas::getCantElems()
 {
 	return this->cantElems;
