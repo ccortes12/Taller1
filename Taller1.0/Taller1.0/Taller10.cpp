@@ -88,11 +88,11 @@ int main()
 
 	system("pause");
 	*/
-
+	/*
 	Astronauta astr = Astronauta("CHORIZO", 56, 30, "PLEXMOVIL");
 	Astronauta astr1 = Astronauta("PLEXMAN", 80, 120, "PLEXSHIP");
-	ListaAstronautas list = ListaAstronautas(8);
-
+	ListaAstronautas list = ListaAstronautas(8);*/
+	/*
 	list.agregar(astr);
 	list.agregar(astr1);
 	list.desplegarLista();
@@ -113,7 +113,11 @@ int main()
 		cout << "No existe elemento" << endl;
 
 	}
+	*/
+	ListaAstronautas list = leerArchAstronautas();
 
+	list.desplegarLista();
+	
 	
 	return 0;
 
