@@ -10,14 +10,13 @@ using namespace std;
 int main()
 {
 	
-	leerArchAstronautas();
+	leerArchAstronautas();//Lectura archivo astronauta
+
+
 	int opcion1, opcion4;
-
-
 	int opcion = menuPrincipal();
 	
-	while (opcion != 8); {
-
+	do {
 		//Switch del programa principal
 		switch (opcion)
 		{
@@ -79,10 +78,11 @@ int main()
 		case 8: //FIN PROGRAMA
 
 			break;
-		}
 
+		}
 		opcion = menuPrincipal();
-	}
+	} while (opcion != 8);
+
 	system("pause");
     return 0;
 }
