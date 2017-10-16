@@ -6,7 +6,8 @@ int subMenu1(); //submenu para case 1
 
 int subMenu4(); //submenu para case 4
 
-ListaAstronautas leerArchAstronautas(); 
+void leerArchAstronautas(); 
 
 void leerArchNaves(); //lectura Archivo Naves.csv
 
+void agregarAstronauta(); //Agregar a un astronauta segun datos pedidos por consola

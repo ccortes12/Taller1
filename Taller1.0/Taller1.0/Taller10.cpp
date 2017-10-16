@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-	/*
+	
 	leerArchAstronautas();//Lectura archivo astronauta
 
 
@@ -30,8 +30,10 @@ int main()
 			switch (opcion1) {
 
 			case 1: //Agregar Astronauta
-
+			
+				agregarAstronauta();
 				break;
+
 			case 2: //Agregar Nave
 
 				break;
@@ -85,38 +87,6 @@ int main()
 		}
 		opcion = menuPrincipal();
 	} while (opcion != 8);
-
-	system("pause");
-	*/
-	/*
-	Astronauta astr = Astronauta("CHORIZO", 56, 30, "PLEXMOVIL");
-	Astronauta astr1 = Astronauta("PLEXMAN", 80, 120, "PLEXSHIP");
-	ListaAstronautas list = ListaAstronautas(8);*/
-	/*
-	list.agregar(astr);
-	list.agregar(astr1);
-	list.desplegarLista();
-	cout << list.getCantElems() << endl;
-
-	list.eliminar(astr);
-
-	list.desplegarLista();
-
-	bool existe = list.buscarElemento(astr1);
-
-	if (existe) {
-
-		cout << "Existe elemento" << endl;
-
-	}else {
-
-		cout << "No existe elemento" << endl;
-
-	}
-	*/
-	ListaAstronautas list = leerArchAstronautas();
-
-	list.desplegarLista();
 	
 	
 	return 0;

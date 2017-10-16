@@ -47,7 +47,7 @@ int subMenu4()
 	} while (opcion < 1 || opcion >2); return opcion;
 }
 
-ListaAstronautas leerArchAstronautas() {
+void leerArchAstronautas() {
 
 	ListaAstronautas listaAstronautas;
 	string linea;
@@ -84,28 +84,25 @@ ListaAstronautas leerArchAstronautas() {
 					getline(ss, palabra, ','); int edad = atoi(palabra.c_str());
 					getline(ss, palabra, ','); int anosExp = atoi(palabra.c_str());
 					string nave;
-					try {
-						getline(ss, palabra, ',');
-						nave = palabra;
-					}
-					catch (...) {//catch all
+					if (ss.eof()) {//linea terminada
 						nave = "";
 					}
+					else {
+						getline(ss, palabra, ','); nave = palabra;
+					}
 
-					Astronauta *ast = new Astronauta(nombre, edad, anosExp, nave);
-					listaAstronautas.agregar(*ast);
-
-					i++;
+					//Astronauta *ast = new Astronauta(nombre, edad, anosExp, nave);
+					
 				}
 			}
 		}
 	}
-	
-	return listaAstronautas;
+	archivoEntrada.close();
 }
 
 void leerArchNaves()
-{
+{/*
+ 
 	string linea;
 	ifstream archivoEntrada;
 
@@ -120,5 +117,27 @@ void leerArchNaves()
 		getline(ss, aux, ','); int maxTripulantes = atoi(aux.c_str());
 
 
+	}*/
+}
+
+void agregarAstronauta()
+{
+	string nombre;
+	cout << "Ingrese datos del Astronauta:\nNombre: "; getline(cin, nombre);
+	int edad;
+	cout << "Edad: "; cin >> edad;
+	int anosExp;
+	cout << "Años Experiencia: "; cin >> anosExp;
+	string nave;
+	cout << "Nave asignada (NO si no esta asignado): ";cin >> nave;
+
+	if (nave == "NO") {
+		nave = "";
 	}
+	Astronauta ast(nombre, edad, anosExp, nave);
+
+	//Agregar a la lista 
+
+	cout << "\nAstronauta ingresado con exito ! \n" << endl;
+
 }
